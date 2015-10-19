@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'instagram'
 require 'bundler'
-require 'haml'
+require 'tilt/haml'
 require 'dotenv'
 
 Bundler.require
