@@ -3,13 +3,14 @@ require 'sinatra'
 require 'instagram'
 require 'bundler'
 require 'haml'
-require 'figaro'
+require 'dotenv'
 
 Bundler.require
+Dotenv.load
 
 Instagram.configure do |config|
-  config.client_id = ENV["client_id"]
-  config.client_secret = ENV["client_secret"]
+  config.client_id = ENV["CLIENT_ID"]
+  config.client_secret = ENV["CLIENT_SECRET"]
 end
 
 get "/" do
