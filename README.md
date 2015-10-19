@@ -10,4 +10,4 @@ HAML,
 Instagram-ruby-gem,
 thin,
 json,
-figaro
+dotenv
