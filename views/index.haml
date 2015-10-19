@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title catstream!
+    %link(rel="stylesheet" href="/css/normalize.css")
+    %link(rel="stylesheet" href="/css/styles.css")
+  %body
+    %header
+      %h1 catstream! #cats
+      %h2 via Instagram client, DBC-Rocks
+      -@photos.each do |datum|
+        %img{:src => datum.images.standard_resolution.url}
+        -if datum.caption.text != "#cats"
+          .caption
+            %p=datum.caption.text
